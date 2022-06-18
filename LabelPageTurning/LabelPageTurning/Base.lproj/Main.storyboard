@@ -58,8 +58,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgLabel" destination="xWV-2a-r4s" id="2Nx-fi-txB"/>
                         <outlet property="bgView" destination="qrO-oP-Fa4" id="xPU-Gx-NMQ"/>
-                        <outlet property="tLabel" destination="xWV-2a-r4s" id="2Nx-fi-txB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

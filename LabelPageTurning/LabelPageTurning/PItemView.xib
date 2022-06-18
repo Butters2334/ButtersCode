@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QHj-wK-pwA" customClass="PItemView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-TU-gFK">
+                    <rect key="frame" x="52" y="293" width="310.5" height="310.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ou4-TU-gFK" secondAttribute="height" multiplier="1:1" id="oUF-4r-BOB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
+                    <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAo-pv-wL5" userLabel="LineView">
+                    <rect key="frame" x="0.0" y="446.5" width="414" height="3"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="naY-U0-grt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1AX-nq-wrw"/>
+            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ou4-TU-gFK" firstAttribute="centerY" secondItem="QHj-wK-pwA" secondAttribute="centerY" id="0P3-sf-pos"/>
+                <constraint firstItem="AAo-pv-wL5" firstAttribute="leading" secondItem="QHj-wK-pwA" secondAttribute="leading" id="ZTz-hD-HT7"/>
+                <constraint firstItem="AAo-pv-wL5" firstAttribute="centerY" secondItem="QHj-wK-pwA" secondAttribute="centerY" id="fJe-4Q-vdy"/>
+                <constraint firstItem="AAo-pv-wL5" firstAttribute="centerX" secondItem="QHj-wK-pwA" secondAttribute="centerX" id="j50-cX-VFa"/>
+                <constraint firstAttribute="trailing" secondItem="AAo-pv-wL5" secondAttribute="trailing" id="ohu-aN-nQf"/>
+                <constraint firstItem="ou4-TU-gFK" firstAttribute="width" secondItem="QHj-wK-pwA" secondAttribute="width" multiplier="0.75" id="rTb-db-Ci7"/>
+                <constraint firstItem="ou4-TU-gFK" firstAttribute="centerX" secondItem="QHj-wK-pwA" secondAttribute="centerX" id="rae-uQ-dcR"/>
+            </constraints>
+            <point key="canvasLocation" x="626" y="75"/>
+        </view>
+    </objects>
+</document>
