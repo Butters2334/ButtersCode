@@ -21,63 +21,66 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.bgView.layer.cornerRadius = 12;
-    self.bgView.layer.masksToBounds = YES;
-    NSLog(@"%@",NSStringFromCGSize(self.bgLabel.frame.size));
     [self.view layoutIfNeeded];
-    NSLog(@"%@",NSStringFromCGSize(self.bgLabel.frame.size));
-    self.tLabelString  = @"01";
-    NSInteger fontSize = 200;
-    do{
-        self.bgLabel.text = self.tLabelString;
-        self.bgLabel.font = [UIFont boldSystemFontOfSize:fontSize];
-        fontSize -- ;
-    }while(getLabelFontWidth(self.bgLabel) > kLabelWidth(self.bgLabel));
-    NSLog(@"%@",self.bgLabel.font);
+    [self.bgView updateFrame];
+    self.bgView.labelString = @"00";
 
-    __weak typeof(self) weakSelf = self;
-    [weakSelf pageTurning];
-//    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//        NSInteger s = weakSelf.tLabelString.integerValue + 1;
-//        s = s >= 60 ? 0 : s;
-//        weakSelf.tLabelString = [NSString stringWithFormat:@"%@%@",(s<10?@"0":@""),@(s)];
-//        [weakSelf pageTurning];
-//    }];
+    [self.topView updateFrame];
+    self.topView.labelString = @"00";
+    self.topView.labelColor = [UIColor systemPinkColor];
+
+    [self.bottomView updateFrame];
+    self.bottomView.labelString = @"00";
+    self.bottomView.labelColor = [UIColor systemPinkColor];
+
     
-
-    CABasicAnimation *theAnimation;
-    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
-    theAnimation.duration = 1;
-    theAnimation.removedOnCompletion = NO;
-    theAnimation.fillMode = @"forwards";
-    theAnimation.repeatCount = MAXINTERP;
-    theAnimation.fromValue = [NSNumber numberWithFloat:0];
-    theAnimation.toValue = [NSNumber numberWithFloat:-M_PI];
-    [self.bgView.layer addAnimation:theAnimation forKey:@"animateTransform"];
+    __weak typeof(self) weakSelf = self;
+//    weakSelf.bgView.alpha = 0;
+//    weakSelf.topView.alpha = 0;
+//    weakSelf.bottomView.alpha = 0;
+    
+    [weakSelf pageTurning];
+    [NSTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSString *firstString = weakSelf.topView.labelString;
+        NSInteger s = firstString.integerValue + 1;
+        s = s >= 60 ? 0 : s;
+        NSString *nextString = [NSString stringWithFormat:@"%@%@",(s<10?@"0":@""),@(s)];
+        weakSelf.bgView.labelString = firstString;
+        weakSelf.topView.labelString = nextString;
+        weakSelf.bottomView.labelString = firstString;
+        [weakSelf pageTurning];
+    }];
 }
 
+//翻转效果
 -(void)pageTurning
 {
-    //左右对齐
-    CGRect textSize = [self.tLabelString boundingRectWithSize:CGSizeMake(self.bgLabel.frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : self.bgLabel.font} context:nil];
-    CGFloat margin = (self.bgLabel.frame.size.width - textSize.size.width) / (self.tLabelString.length - 1);
-    NSNumber *number = [NSNumber numberWithFloat:margin];
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc]initWithString:self.tLabelString];
-    [attributeString addAttribute:(id)kCTKernAttributeName value:number range:NSMakeRange(0, self.tLabelString.length - 1)];
-    self.bgLabel.attributedText = attributeString;
+    __weak typeof(self) weakSelf = self;
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
+    theAnimation.duration = 1.f;
+    theAnimation.beginTime = CACurrentMediaTime()+0.6;
+    theAnimation.removedOnCompletion = NO;
+    theAnimation.fillMode = @"forwards";
+    theAnimation.repeatCount = 0;
+    theAnimation.fromValue = [NSNumber numberWithFloat:0];
+    theAnimation.toValue = [NSNumber numberWithFloat:-M_PI/2];
+    [weakSelf.bgView.layer addAnimation:theAnimation forKey:@"animateTransform"];
 
-    
-//    __weak typeof(self) weakSelf = self;
-//    sleepForMain(.6f, ^{
-//        //翻转效果
-//        CATransition *animation = [CATransition animation];
-//        animation.duration = .5f;
-//        animation.type = @"oglFlip";
-//        animation.subtype = kCATransitionFromBottom;
-//        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//        [weakSelf.bgView.layer addAnimation:animation forKey:@"animation"];
-//    });
+    //修改数值
+    weakSelf.bgView.labelString = weakSelf.topView.labelString;
 
+    //一半之后的动画
+//    CABasicAnimation *theAnimation2;
+//    theAnimation2=[CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
+//    theAnimation2.duration = 1.f;
+//    theAnimation2.beginTime = CACurrentMediaTime()+1.6;
+//    theAnimation2.removedOnCompletion = NO;
+//    theAnimation2.fillMode = @"forwards";
+//    theAnimation2.repeatCount = 0;
+//    theAnimation2.fromValue = [NSNumber numberWithFloat:-M_PI/2];
+//    theAnimation2.toValue = [NSNumber numberWithFloat:0];
+//    [weakSelf.bgView.layer addAnimation:theAnimation2 forKey:@"animateTransform"];
 }
 @end
 

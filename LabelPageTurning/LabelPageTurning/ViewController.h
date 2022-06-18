@@ -6,15 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PItemView.h"
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *bgView;
-@property (weak, nonatomic) IBOutlet UILabel *bgLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *topView;
-@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak,nonatomic)IBOutlet PItemView *bgView;
 
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak,nonatomic)IBOutlet PItemView *topView;
+@property (weak,nonatomic)IBOutlet PItemView *bottomView;
 @end
 

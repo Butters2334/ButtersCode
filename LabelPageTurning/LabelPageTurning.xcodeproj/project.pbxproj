@@ -17,6 +17,7 @@
 		408F8892285C1D3B0041F07A /* ButtersTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8891285C1D3B0041F07A /* ButtersTool.m */; };
 		408F8898285D97220041F07A /* PItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8897285D97220041F07A /* PItemView.m */; };
 		408F889B285D972B0041F07A /* PItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408F889A285D972B0041F07A /* PItemView.xib */; };
+		408F889F285D9C3C0041F07A /* UIView+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F889E285D9C3C0041F07A /* UIView+size.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		408F8896285D97220041F07A /* PItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PItemView.h; sourceTree = "<group>"; };
 		408F8897285D97220041F07A /* PItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PItemView.m; sourceTree = "<group>"; };
 		408F889A285D972B0041F07A /* PItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PItemView.xib; sourceTree = "<group>"; };
+		408F889D285D9C3C0041F07A /* UIView+size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+size.h"; sourceTree = "<group>"; };
+		408F889E285D9C3C0041F07A /* UIView+size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+size.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 		40324265285AFA4F003F4B4B /* LabelPageTurning */ = {
 			isa = PBXGroup;
 			children = (
+				408F889D285D9C3C0041F07A /* UIView+size.h */,
+				408F889E285D9C3C0041F07A /* UIView+size.m */,
 				40324266285AFA4F003F4B4B /* AppDelegate.h */,
 				40324267285AFA4F003F4B4B /* AppDelegate.m */,
 				40324269285AFA4F003F4B4B /* SceneDelegate.h */,
@@ -165,6 +170,7 @@
 				40324268285AFA4F003F4B4B /* AppDelegate.m in Sources */,
 				40324279285AFA5A003F4B4B /* main.m in Sources */,
 				4032426B285AFA4F003F4B4B /* SceneDelegate.m in Sources */,
+				408F889F285D9C3C0041F07A /* UIView+size.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
