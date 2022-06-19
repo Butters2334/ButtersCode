@@ -24,14 +24,15 @@
     [self.view layoutIfNeeded];
     [self.bgView updateFrame];
     self.bgView.labelString = @"00";
+//    self.bgView.bgColor = [UIColor lightTextColor];
 
     [self.topView updateFrame];
-    self.topView.labelString = @"00";
-    self.topView.labelColor = [UIColor systemPinkColor];
+    self.topView.labelString = @"01";
+//    self.topView.labelColor = [UIColor systemPinkColor];
 
     [self.bottomView updateFrame];
     self.bottomView.labelString = @"00";
-    self.bottomView.labelColor = [UIColor systemPinkColor];
+//    self.bottomView.labelColor = [UIColor systemPinkColor];
 
     
     __weak typeof(self) weakSelf = self;
@@ -68,19 +69,21 @@
     [weakSelf.bgView.layer addAnimation:theAnimation forKey:@"animateTransform"];
 
     //修改数值
-    weakSelf.bgView.labelString = weakSelf.topView.labelString;
+    sleepForMain(1.6, ^{
+        weakSelf.bgView.labelString = weakSelf.topView.labelString;
+    });
 
     //一半之后的动画
-//    CABasicAnimation *theAnimation2;
-//    theAnimation2=[CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
-//    theAnimation2.duration = 1.f;
-//    theAnimation2.beginTime = CACurrentMediaTime()+1.6;
-//    theAnimation2.removedOnCompletion = NO;
-//    theAnimation2.fillMode = @"forwards";
-//    theAnimation2.repeatCount = 0;
-//    theAnimation2.fromValue = [NSNumber numberWithFloat:-M_PI/2];
-//    theAnimation2.toValue = [NSNumber numberWithFloat:0];
-//    [weakSelf.bgView.layer addAnimation:theAnimation2 forKey:@"animateTransform"];
+    CABasicAnimation *theAnimation2;
+    theAnimation2=[CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
+    theAnimation2.duration = 1.f;
+    theAnimation2.beginTime = CACurrentMediaTime()+1.6;
+    theAnimation2.removedOnCompletion = NO;
+    theAnimation2.fillMode = @"forwards";
+    theAnimation2.repeatCount = 0;
+    theAnimation2.fromValue = [NSNumber numberWithFloat:M_PI/2];
+    theAnimation2.toValue = [NSNumber numberWithFloat:0];
+    [weakSelf.bgView.layer addAnimation:theAnimation2 forKey:@"animateTransform2"];
 }
 @end
 
