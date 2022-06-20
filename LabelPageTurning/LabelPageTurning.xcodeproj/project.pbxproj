@@ -14,6 +14,7 @@
 		40324273285AFA5A003F4B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40324272285AFA5A003F4B4B /* Assets.xcassets */; };
 		40324276285AFA5A003F4B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40324274285AFA5A003F4B4B /* LaunchScreen.storyboard */; };
 		40324279285AFA5A003F4B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40324278285AFA5A003F4B4B /* main.m */; };
+		407CE239285EE8D90067D610 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CE238285EE8D90067D610 /* UIColor+hex.m */; };
 		408F8892285C1D3B0041F07A /* ButtersTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8891285C1D3B0041F07A /* ButtersTool.m */; };
 		408F8898285D97220041F07A /* PItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8897285D97220041F07A /* PItemView.m */; };
 		408F889B285D972B0041F07A /* PItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408F889A285D972B0041F07A /* PItemView.xib */; };
@@ -33,6 +34,8 @@
 		40324275285AFA5A003F4B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40324277285AFA5A003F4B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40324278285AFA5A003F4B4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		407CE237285EE8D90067D610 /* UIColor+hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
+		407CE238285EE8D90067D610 /* UIColor+hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
 		408F8890285C1D3B0041F07A /* ButtersTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtersTool.h; sourceTree = "<group>"; };
 		408F8891285C1D3B0041F07A /* ButtersTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtersTool.m; sourceTree = "<group>"; };
 		408F8896285D97220041F07A /* PItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PItemView.h; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				4032426A285AFA4F003F4B4B /* SceneDelegate.m */,
 				4032426C285AFA4F003F4B4B /* ViewController.h */,
 				4032426D285AFA4F003F4B4B /* ViewController.m */,
+				407CE237285EE8D90067D610 /* UIColor+hex.h */,
+				407CE238285EE8D90067D610 /* UIColor+hex.m */,
 				408F8890285C1D3B0041F07A /* ButtersTool.h */,
 				408F8891285C1D3B0041F07A /* ButtersTool.m */,
 				4032426F285AFA4F003F4B4B /* Main.storyboard */,
@@ -169,6 +174,7 @@
 				408F8898285D97220041F07A /* PItemView.m in Sources */,
 				40324268285AFA4F003F4B4B /* AppDelegate.m in Sources */,
 				40324279285AFA5A003F4B4B /* main.m in Sources */,
+				407CE239285EE8D90067D610 /* UIColor+hex.m in Sources */,
 				4032426B285AFA4F003F4B4B /* SceneDelegate.m in Sources */,
 				408F889F285D9C3C0041F07A /* UIView+size.m in Sources */,
 			);
