@@ -1,0 +1,16 @@
+PODS:
+  - ButtersCode (0.0.1)
+
+DEPENDENCIES:
+  - ButtersCode (from `../ButtersCode`)
+
+EXTERNAL SOURCES:
+  ButtersCode:
+    :path: "../ButtersCode"
+
+SPEC CHECKSUMS:
+  ButtersCode: 3cc3171fa9569302b78fe62fde53d4d7bd78073e
+
+PODFILE CHECKSUM: 40b669784000cccead43dcfb418b9af79ef1dba4
+
+COCOAPODS: 1.11.3

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,14 +14,14 @@
 		40324273285AFA5A003F4B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40324272285AFA5A003F4B4B /* Assets.xcassets */; };
 		40324276285AFA5A003F4B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40324274285AFA5A003F4B4B /* LaunchScreen.storyboard */; };
 		40324279285AFA5A003F4B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40324278285AFA5A003F4B4B /* main.m */; };
-		407CE239285EE8D90067D610 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 407CE238285EE8D90067D610 /* UIColor+hex.m */; };
-		408F8892285C1D3B0041F07A /* ButtersTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8891285C1D3B0041F07A /* ButtersTool.m */; };
 		408F8898285D97220041F07A /* PItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F8897285D97220041F07A /* PItemView.m */; };
 		408F889B285D972B0041F07A /* PItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408F889A285D972B0041F07A /* PItemView.xib */; };
-		408F889F285D9C3C0041F07A /* UIView+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 408F889E285D9C3C0041F07A /* UIView+size.m */; };
+		C627F9B6A13DDCF2EAF49563 /* Pods_LabelPageTurning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D826A281A527F87D913D2C2 /* Pods_LabelPageTurning.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB2F6647C89861DBDDD9DF5 /* Pods-LabelPageTurning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabelPageTurning.release.xcconfig"; path = "Target Support Files/Pods-LabelPageTurning/Pods-LabelPageTurning.release.xcconfig"; sourceTree = "<group>"; };
+		3D607407EA8BEDBAD16A6A52 /* Pods-LabelPageTurning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabelPageTurning.debug.xcconfig"; path = "Target Support Files/Pods-LabelPageTurning/Pods-LabelPageTurning.debug.xcconfig"; sourceTree = "<group>"; };
 		40324263285AFA4F003F4B4B /* LabelPageTurning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabelPageTurning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40324266285AFA4F003F4B4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40324267285AFA4F003F4B4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,15 +34,10 @@
 		40324275285AFA5A003F4B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40324277285AFA5A003F4B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40324278285AFA5A003F4B4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		407CE237285EE8D90067D610 /* UIColor+hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
-		407CE238285EE8D90067D610 /* UIColor+hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
-		408F8890285C1D3B0041F07A /* ButtersTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtersTool.h; sourceTree = "<group>"; };
-		408F8891285C1D3B0041F07A /* ButtersTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtersTool.m; sourceTree = "<group>"; };
 		408F8896285D97220041F07A /* PItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PItemView.h; sourceTree = "<group>"; };
 		408F8897285D97220041F07A /* PItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PItemView.m; sourceTree = "<group>"; };
 		408F889A285D972B0041F07A /* PItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PItemView.xib; sourceTree = "<group>"; };
-		408F889D285D9C3C0041F07A /* UIView+size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+size.h"; sourceTree = "<group>"; };
-		408F889E285D9C3C0041F07A /* UIView+size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+size.m"; sourceTree = "<group>"; };
+		9D826A281A527F87D913D2C2 /* Pods_LabelPageTurning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LabelPageTurning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C627F9B6A13DDCF2EAF49563 /* Pods_LabelPageTurning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15383E52831AEBC370CC94E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D607407EA8BEDBAD16A6A52 /* Pods-LabelPageTurning.debug.xcconfig */,
+				0AB2F6647C89861DBDDD9DF5 /* Pods-LabelPageTurning.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4032425A285AFA4F003F4B4B = {
 			isa = PBXGroup;
 			children = (
 				40324265285AFA4F003F4B4B /* LabelPageTurning */,
 				40324264285AFA4F003F4B4B /* Products */,
+				15383E52831AEBC370CC94E5 /* Pods */,
+				86839205A8B52E416F8CE31D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,18 +82,12 @@
 		40324265285AFA4F003F4B4B /* LabelPageTurning */ = {
 			isa = PBXGroup;
 			children = (
-				408F889D285D9C3C0041F07A /* UIView+size.h */,
-				408F889E285D9C3C0041F07A /* UIView+size.m */,
 				40324266285AFA4F003F4B4B /* AppDelegate.h */,
 				40324267285AFA4F003F4B4B /* AppDelegate.m */,
 				40324269285AFA4F003F4B4B /* SceneDelegate.h */,
 				4032426A285AFA4F003F4B4B /* SceneDelegate.m */,
 				4032426C285AFA4F003F4B4B /* ViewController.h */,
 				4032426D285AFA4F003F4B4B /* ViewController.m */,
-				407CE237285EE8D90067D610 /* UIColor+hex.h */,
-				407CE238285EE8D90067D610 /* UIColor+hex.m */,
-				408F8890285C1D3B0041F07A /* ButtersTool.h */,
-				408F8891285C1D3B0041F07A /* ButtersTool.m */,
 				4032426F285AFA4F003F4B4B /* Main.storyboard */,
 				408F8896285D97220041F07A /* PItemView.h */,
 				408F8897285D97220041F07A /* PItemView.m */,
@@ -99,6 +100,14 @@
 			path = LabelPageTurning;
 			sourceTree = "<group>";
 		};
+		86839205A8B52E416F8CE31D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D826A281A527F87D913D2C2 /* Pods_LabelPageTurning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4032427C285AFA5A003F4B4B /* Build configuration list for PBXNativeTarget "LabelPageTurning" */;
 			buildPhases = (
+				123E723F3B3803A0EFCD1EC2 /* [CP] Check Pods Manifest.lock */,
 				4032425F285AFA4F003F4B4B /* Sources */,
 				40324260285AFA4F003F4B4B /* Frameworks */,
 				40324261285AFA4F003F4B4B /* Resources */,
+				5171C830D694ED1B8061889D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,19 +175,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		123E723F3B3803A0EFCD1EC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LabelPageTurning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5171C830D694ED1B8061889D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabelPageTurning/Pods-LabelPageTurning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LabelPageTurning/Pods-LabelPageTurning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LabelPageTurning/Pods-LabelPageTurning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4032425F285AFA4F003F4B4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408F8892285C1D3B0041F07A /* ButtersTool.m in Sources */,
 				4032426E285AFA4F003F4B4B /* ViewController.m in Sources */,
 				408F8898285D97220041F07A /* PItemView.m in Sources */,
 				40324268285AFA4F003F4B4B /* AppDelegate.m in Sources */,
 				40324279285AFA5A003F4B4B /* main.m in Sources */,
-				407CE239285EE8D90067D610 /* UIColor+hex.m in Sources */,
 				4032426B285AFA4F003F4B4B /* SceneDelegate.m in Sources */,
-				408F889F285D9C3C0041F07A /* UIView+size.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +366,7 @@
 		};
 		4032427D285AFA5A003F4B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D607407EA8BEDBAD16A6A52 /* Pods-LabelPageTurning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +384,7 @@
 		};
 		4032427E285AFA5A003F4B4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB2F6647C89861DBDDD9DF5 /* Pods-LabelPageTurning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

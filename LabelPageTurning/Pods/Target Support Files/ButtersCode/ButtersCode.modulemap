@@ -1,0 +1,6 @@
+framework module ButtersCode {
+  umbrella header "ButtersCode-umbrella.h"
+
+  export *
+  module * { export * }
+}
