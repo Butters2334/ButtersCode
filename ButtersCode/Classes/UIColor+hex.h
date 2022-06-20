@@ -21,4 +21,3 @@ UIColor *rgbAlphaColor(CGFloat red,CGFloat green,CGFloat blue,CGFloat alpha);
 UIColor *rgbColor(CGFloat red,CGFloat green,CGFloat blue);
 UIColor *randomColor(void);
 
-//test

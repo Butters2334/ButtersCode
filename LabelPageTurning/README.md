@@ -1,2 +1,2 @@
-![Alt Text](https://github.com/Butters2334/ButtersCode/LabelPageTurning/Turning.gif)
+![Alt Text](https://raw.githubusercontent.com/Butters2334/ButtersCode/master/LabelPageTurning/Turning.gif)
 
