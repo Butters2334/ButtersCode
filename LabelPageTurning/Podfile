@@ -8,5 +8,5 @@ target 'LabelPageTurning' do
   # Pods for LabelPageTurning
   pod 'ButtersCode', :path=>'../ButtersCode'
   pod 'YYKit', '~> 1.0.9'
-#  pod 'MJRefresh', '~> 3.7.5'
+  pod 'MJRefresh', '~> 3.7.5'
 end
