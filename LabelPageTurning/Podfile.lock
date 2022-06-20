@@ -1,15 +1,18 @@
 PODS:
   - ButtersCode (0.0.1)
+  - MJRefresh (3.7.5)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - ButtersCode (from `../ButtersCode`)
+  - MJRefresh (~> 3.7.5)
   - YYKit (~> 1.0.9)
 
 SPEC REPOS:
   trunk:
+    - MJRefresh
     - YYKit
 
 EXTERNAL SOURCES:
@@ -18,8 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ButtersCode: 3cc3171fa9569302b78fe62fde53d4d7bd78073e
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b6178b54d7d70aa05670732dd1483ba498ddb714
+PODFILE CHECKSUM: 918f94791ae1ec04ffa1f6c089f9324dee7e9188
 
 COCOAPODS: 1.11.3
