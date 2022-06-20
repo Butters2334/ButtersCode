@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-qf-DUR">
-                                <rect key="frame" x="107" y="408.5" width="200" height="79"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <rect key="frame" x="100" y="408.5" width="214.5" height="79"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="66"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
