@@ -1,8 +1,16 @@
 PODS:
   - ButtersCode (0.0.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - ButtersCode (from `../ButtersCode`)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  trunk:
+    - YYKit
 
 EXTERNAL SOURCES:
   ButtersCode:
@@ -10,7 +18,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ButtersCode: 3cc3171fa9569302b78fe62fde53d4d7bd78073e
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 40b669784000cccead43dcfb418b9af79ef1dba4
+PODFILE CHECKSUM: b6178b54d7d70aa05670732dd1483ba498ddb714
 
 COCOAPODS: 1.11.3
