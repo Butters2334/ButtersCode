@@ -106,3 +106,6 @@ void sleepForMain(NSTimeInterval ti, dispatch_block_t block);
 void sleepForBg(NSTimeInterval ti, dispatch_block_t block);
 //runtime交换函数
 void runtimeReplaceFunctionWithSelector(Class aClass,SEL origin,SEL swizzle,BOOL isClassMethod);
+
+/**从UIWindow获取当前vc,调试阶段很实用*/
+UIViewController* getTopViewController(void);

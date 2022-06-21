@@ -71,8 +71,8 @@ UIColor *rgbColor(CGFloat red,CGFloat green,CGFloat blue)
 
 UIColor *randomColor(void)
 {
-    CGFloat R = arc4random_uniform(256) / 255.0;
-    CGFloat G = arc4random_uniform(256) / 255.0;
-    CGFloat B = arc4random_uniform(256) / 255.0;
+    CGFloat R = arc4random_uniform(256);
+    CGFloat G = arc4random_uniform(256);
+    CGFloat B = arc4random_uniform(256);
     return rgbColor(R, G, B);
 }

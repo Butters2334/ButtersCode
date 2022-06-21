@@ -41,3 +41,17 @@ void runtimeReplaceFunctionWithSelector(Class aClass,SEL origin,SEL swizzle,BOOL
 CGFloat getLabelFontWidth(UILabel *tLabel){
     return [tLabel.text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : tLabel.font} context:nil].size.width;
 }
+
+
+/**从UIWindow获取当前vc,调试阶段很实用*/
+UIViewController* getTopViewController(void)
+{
+    UIWindow *window = [[UIApplication sharedApplication]keyWindow];
+    UIViewController *rootVC = window.rootViewController;
+    if([rootVC isKindOfClass:UINavigationController.class])
+    {
+        UINavigationController *nav = (UINavigationController *)rootVC;
+        return nav.topViewController;
+    }
+    return rootVC;
+}
