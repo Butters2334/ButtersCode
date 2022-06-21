@@ -35,8 +35,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-22-zMN" customClass="Draw" customModule="DrawDemo" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="10" width="108" height="108"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="pointCount">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="drawWidth">
+                                                            <real key="value" value="120"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="drawHeight">
+                                                            <real key="value" value="120"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhF-sD-rTa">
                                                     <rect key="frame" x="43" y="53.5" width="42" height="21"/>
@@ -46,12 +57,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bHg-22-zMN" secondAttribute="trailing" constant="10" id="AmO-LU-hti"/>
+                                                <constraint firstAttribute="trailing" secondItem="bHg-22-zMN" secondAttribute="trailing" id="AmO-LU-hti"/>
                                                 <constraint firstItem="IhF-sD-rTa" firstAttribute="centerY" secondItem="Rvc-qB-AU4" secondAttribute="centerY" id="IlP-qH-Sxn"/>
-                                                <constraint firstItem="bHg-22-zMN" firstAttribute="leading" secondItem="Rvc-qB-AU4" secondAttribute="leading" constant="10" id="NMZ-Gg-sGW"/>
-                                                <constraint firstItem="bHg-22-zMN" firstAttribute="top" secondItem="Rvc-qB-AU4" secondAttribute="top" constant="10" id="PO6-rr-ol2"/>
+                                                <constraint firstItem="bHg-22-zMN" firstAttribute="leading" secondItem="Rvc-qB-AU4" secondAttribute="leading" id="NMZ-Gg-sGW"/>
+                                                <constraint firstItem="bHg-22-zMN" firstAttribute="top" secondItem="Rvc-qB-AU4" secondAttribute="top" id="PO6-rr-ol2"/>
                                                 <constraint firstItem="IhF-sD-rTa" firstAttribute="centerX" secondItem="Rvc-qB-AU4" secondAttribute="centerX" id="RHl-Wm-BUF"/>
-                                                <constraint firstAttribute="bottom" secondItem="bHg-22-zMN" secondAttribute="bottom" constant="10" id="fe2-66-8kR"/>
+                                                <constraint firstAttribute="bottom" secondItem="bHg-22-zMN" secondAttribute="bottom" id="fe2-66-8kR"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,6 +96,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
