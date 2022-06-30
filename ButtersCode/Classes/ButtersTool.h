@@ -109,3 +109,7 @@ void runtimeReplaceFunctionWithSelector(Class aClass,SEL origin,SEL swizzle,BOOL
 
 /**从UIWindow获取当前vc,调试阶段很实用*/
 UIViewController* getTopViewController(void);
+
+
+
+id copyObject(id allObject);

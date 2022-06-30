@@ -9,20 +9,34 @@ import UIKit
 
 @IBDesignable
 class Draw:UIView{
-    private var _pointCount = 0
     @IBInspectable var drawWidth :CGFloat = 0.0
     @IBInspectable var drawHeight:CGFloat = 0.0
+    private var _pointCount = 0
     @IBInspectable var pointCount:Int {
         set{
             _pointCount = newValue
-            drawPolygon()
+//            drawPolygon()
         }
         get{
             return _pointCount
         }
     }
+
+    var _layerFillColor:[CGColor] = []
+    var layerFillColor:[CGColor]{
+        set{
+            _layerFillColor = newValue
+        }
+        get{
+            for layer in layer.sublayers ?? []{
+                if layer.isKind(of: CAShapeLayer.self){
+                    _layerFillColor.append((layer as! CAShapeLayer).fillColor ?? UIColor.red.cgColor)
+                }
+            }
+            return _layerFillColor
+        }
+    }
     func drawPolygon() {
-//        self.layoutIfNeeded()
         for layer in layer.sublayers ?? []{
             layer.removeFromSuperlayer()
         }
@@ -39,23 +53,26 @@ class Draw:UIView{
         }
 
         let circleRadius = CGFloat(drawWidth/2)
-        let path = UIBezierPath()
         let circleCenter = CGPoint(x:drawWidth/2,y:drawHeight/2);
-        path.move(to:circleCenter)
-        for index in 0...pointCount{
-            let angle = Double(360.0/Float(pointCount) * Float(index))
-            let sinus = CGFloat(sin(angle * Double.pi / 180))
-            let a = sinus * circleRadius
-            let cosinus = CGFloat(cos(angle * Double.pi / 180))
-            let b = cosinus * circleRadius
-            path.addLine(to: CGPoint(x:circleCenter.x+a,y:circleCenter.y+b))
+        for index in 0...pointCount-1{
+            let path = UIBezierPath()
+            path.move(to:circleCenter)
+            for i in 0...1{
+                let angle = Double(360.0/Float(pointCount) * Float(index+i))
+                let sinus = CGFloat(sin(angle * Double.pi / 180))
+                let a = sinus * circleRadius
+                let cosinus = CGFloat(cos(angle * Double.pi / 180))
+                let b = cosinus * circleRadius
+                path.addLine(to: CGPoint(x:circleCenter.x+a,y:circleCenter.y+b))
+            }
+            path.addLine(to:circleCenter)
+            path.close()
+            let shapeLayer = CAShapeLayer()
+            shapeLayer.path = path.cgPath
+            shapeLayer.strokeColor = UIColor.red.cgColor
+            shapeLayer.fillColor = _layerFillColor.count > index+1 ? _layerFillColor[index+1] : randomColor().cgColor
+            shapeLayer.lineWidth = 0
+            self.layer.addSublayer(shapeLayer)
         }
-        path.close()
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.fillColor = randomColor().cgColor
-        shapeLayer.lineWidth = 0
-        self.layer.addSublayer(shapeLayer)
     }
 }

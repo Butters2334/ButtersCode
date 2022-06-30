@@ -21,18 +21,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 999
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt
                             indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath)
-        let draw = cell.subviews[0].subviews[0] as! Draw
+        
+        let draw = cell.viewWithTag(100) as! Draw
         draw.pointCount = indexPath.item + 3
         draw.drawWidth = cellWidth
         draw.drawHeight = cellWidth
         draw.drawPolygon()
-        let label = cell.subviews[0].subviews[1] as! UILabel
-        label.text = "\(draw.pointCount)"
+        let button = cell.viewWithTag(101) as! UIButton
+        button.setTitle("\(draw.pointCount)", for: .normal)
         return cell;
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
@@ -42,6 +43,18 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return cellGap
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let but = sender as! UIButton
+        let draw = but.superview?.viewWithTag(100) as! Draw
+        let vc = segue.destination;
+        vc.view.layoutIfNeeded()
+        let vcDrawView = vc.view.viewWithTag(100) as! Draw
+        vcDrawView.layerFillColor = draw.layerFillColor
+        vcDrawView.pointCount = draw.pointCount
+        vcDrawView.drawWidth = vcDrawView.frame.size.width
+        vcDrawView.drawHeight = vcDrawView.frame.size.height
+        vcDrawView.drawPolygon()
     }
 }
 

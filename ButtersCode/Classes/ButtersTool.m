@@ -55,3 +55,8 @@ UIViewController* getTopViewController(void)
     }
     return rootVC;
 }
+
+
+id copyObject(id allObject){
+    return [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:allObject]];
+}
